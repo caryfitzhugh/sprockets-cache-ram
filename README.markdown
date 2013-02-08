@@ -1,7 +1,7 @@
-Sprockets Redis Cache
+Sprockets Ram Cache
 ====================
 
-A cache store for Sprockets which utilities Redis. 
+A cache store for Sprockets which utilities Ram.
 
 Usage
 -----
@@ -9,17 +9,15 @@ Usage
 Gemfile:
 
     gem 'sprockets'
-    gem 'sprockets-cache-redis'
+    gem 'sprockets-cache-ram'
     ...
 
 config.ru:
 
-    require 'sprockets-cache-redis'
+    require 'sprockets-cache-ram'
     env = Sprockets::Environment.new
-    env.cache = Sprockets::Cache::RedisStore.new(redis, 'sprockets')
+    env.cache = Sprockets::Cache::Ram.new
     ...
-
-Where the first argument is a Redis connection, and the other (which is optional) is a key_prefix.
 
 License
 -------
@@ -44,4 +42,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
