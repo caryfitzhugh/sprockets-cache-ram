@@ -1,7 +1,7 @@
 module Sprockets
   module Cache
-    module Redis
-      VERSION = "0.0.3"
+    module Ram
+      VERSION = "1.0"
     end
   end
 end
